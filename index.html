@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- viewport-fit=cover: the app draws under the iPhone status bar and home indicator (SafeAreaView pads it).
+         maximum-scale=1 keeps iOS from zooming in whenever a number field gets the focus. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>Gym Tracker</title>
+    <meta name="description" content="Workout plan with progression, history and nutrition. Works offline, and your data stays on your device." />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0b0c0e" />
+    <!-- Installable app: manifest.json, icons/ and the offline service worker sw.js are added by scripts/web.js. -->
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Gym Tracker" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <script>
+      // The site answers on plain http too, where browsers refuse the service worker that makes the app work offline.
+      if (location.protocol === 'http:' && !/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) {
+        location.replace('https:' + location.href.slice(5));
+      }
+    </script>
+    <!-- The phone app's heavy condensed title face (src/components/ui.js), from fonts the system already has: iPhone and
+         Mac, Windows, Linux. Nothing is downloaded; Android gets its condensed face from the family list in ui.js. -->
+    <style>
+      @font-face {
+        font-family: "Gym Display";
+        font-weight: 100 900;
+        src: local("HelveticaNeue-CondensedBlack"), local("Helvetica Neue Condensed Black"),
+          local("Bahnschrift Condensed Bold"), local("BahnschriftCondensed-Bold"),
+          local("Roboto Condensed Bold"), local("RobotoCondensed-Bold"),
+          local("Arial Narrow Bold"), local("ArialNarrow-Bold"),
+          local("Liberation Sans Narrow Bold"), local("DejaVu Sans Condensed Bold");
+      }
+    </style>
+    <!-- react-native-web's reset (full-height root, no page scrolling) on the app's background colour. Text is not
+         selectable by a stray long press or slide, as in the phone app; fields and the JSON view still are. -->
+    <style id="expo-reset">
+      html, body { height: 100%; }
+      /* On the iPhone home screen (translucent status bar) iOS keeps the app's window one status bar short – an empty strip
+         under the tab bar – until the page itself is as tall as the screen. 100lvh is the screen height there; in a Safari
+         tab it would reach under the toolbar, so it only applies to the installed app. */
+      @media (display-mode: standalone) { html, body { height: 100lvh; } }
+      body {
+        margin: 0;
+        overflow: hidden;
+        overscroll-behavior: none;
+        background-color: #0b0c0e;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-text-size-adjust: 100%;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+      }
+      input, textarea { -webkit-user-select: text; user-select: text; }
+      /* With a keyboard on a wide screen, the Tab key rings the button it reached in red; a click or a tap shows no ring. */
+      [tabindex]:focus-visible { outline: 2px solid #e0142d; outline-offset: 2px; }
+      #root { display: flex; position: fixed; top: 0; right: 0; bottom: 0; left: 0; }
+    </style>
+  </head>
+
+  <body>
+    <noscript>Gym Tracker needs JavaScript.</noscript>
+    <div id="root"></div>
+  <script src="/_expo/static/js/web/index-055ca6c48831d2cb8a59d04a793194cc.js" defer></script>
+</body>
+</html>
