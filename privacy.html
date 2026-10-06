@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gym Tracker – Privacy</title>
+    <meta name="description" content="Gym Tracker has no account, no server and no analytics. What you log stays on your device." />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0b0c0e" />
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png" />
+    <!-- A page of its own beside the app (the App Store listing and More link here). Same colours and title face as the
+         app, from fonts the system already has; nothing is downloaded. scripts/web.js keeps it out of the app's way. -->
+    <style>
+      @font-face {
+        font-family: "Gym Display";
+        font-weight: 100 900;
+        src: local("HelveticaNeue-CondensedBlack"), local("Helvetica Neue Condensed Black"),
+          local("Bahnschrift Condensed Bold"), local("BahnschriftCondensed-Bold"),
+          local("Roboto Condensed Bold"), local("RobotoCondensed-Bold"),
+          local("Arial Narrow Bold"), local("ArialNarrow-Bold"),
+          local("Liberation Sans Narrow Bold"), local("DejaVu Sans Condensed Bold");
+      }
+      body { margin: 0; background: #0b0c0e; color: #d7d9dd; font: 17px/1.6 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; -webkit-text-size-adjust: 100%; }
+      main { max-width: 680px; margin: 0 auto; padding: 48px 20px 72px; }
+      h1, h2 { font-family: "Gym Display", "Arial Narrow", sans-serif; color: #f4f5f6; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.1; }
+      h1 { font-size: 40px; margin: 0 0 8px; }
+      h2 { font-size: 22px; margin: 40px 0 8px; }
+      p, ul { margin: 0 0 14px; }
+      ul { padding-left: 22px; }
+      a { color: #ff4d63; }
+      .lead { color: #f4f5f6; font-size: 19px; }
+      .quiet { color: #8b9098; font-size: 15px; }
+      nav { margin-bottom: 36px; font-size: 15px; }
+      nav a { margin-right: 18px; }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <nav><a href="./">Gym Tracker</a><a href="support.html">Support</a></nav>
+      <h1>Privacy</h1>
+      <p class="lead">Gym Tracker has no account, no server and no analytics. What you log stays on your device.</p>
+
+      <h2>What the app stores</h2>
+      <p>Your workouts, weights, body measurements, nutrition and sleep entries, notes and settings are stored on your
+        device only: in the app's storage on the iPhone, or in your browser's storage when you use the web app. Nothing
+        of it is sent to me or to anyone else. I cannot see it, and I cannot restore it for you.</p>
+      <ul>
+        <li>Backups are files on your device. The automatic weekly backup is written to the app's folder in Files, and
+          an export goes wherever you send it from the share sheet.</li>
+        <li>Reminders and the rest timer are local notifications, scheduled on the device. The app uses no push service.</li>
+        <li>There are no ads, no tracking, no third-party analytics and no sign-in.</li>
+      </ul>
+
+      <h2>The only connections the app makes</h2>
+      <ul>
+        <li><strong>Update check (iPhone app).</strong> When it starts, the app asks Expo's update service (Expo,
+          650 Industries Inc., USA) whether a newer version of the app's own code is available, and downloads it if so.
+          The request carries technical details only: the platform, the app's version, and a random installation ID that
+          is created on the device and is not derived from your hardware, your Apple Account or anything you enter. As with
+          any internet request, Expo's servers see your IP address. None of your entries are part of it. The purpose is
+          to deliver fixes (Art. 6(1)(f) GDPR). Without a connection the app simply starts as it is.</li>
+        <li><strong>Web app.</strong> gym.sardio.dev is served by GitHub Pages (GitHub Inc., USA), which processes the IP
+          addresses of visitors to deliver the site and keep it secure. After the first visit the app's files are kept
+          in your browser and it works without a connection.</li>
+      </ul>
+
+      <h2>Your control</h2>
+      <p>Everything is in your hands inside the app: <em>More › Backup &amp; data</em> exports all of it as one file, and
+        <em>Delete all data</em> in the same place erases it. Deleting the app, or the website's data in your browser,
+        removes it as well. Because I hold no data about you, there is nothing I could hand over, correct or delete on
+        my side; if you write to me, I only have your message.</p>
+
+      <h2>Health information</h2>
+      <p>The numbers the app suggests – weights, calories, protein, body fat estimates – are general training guidance
+        worked out on your device from what you entered. They are not medical advice.</p>
+
+      <h2>Contact</h2>
+      <p>Gym Tracker is made by Sardio, an independent developer. Questions about this page or the app:
+        <a href="mailto:hello@sardio.dev">hello@sardio.dev</a>.</p>
+      <p class="quiet">Last updated: 18 September 2026. If the app ever changes what leaves your device, this page
+        changes first.</p>
+    </main>
+  </body>
+</html>
