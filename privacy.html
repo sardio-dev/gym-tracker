@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Overload – Privacy</title>
+    <meta name="description" content="Overload works without an account, and then what you log stays on your device. What an optional account keeps, and how to delete it." />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0b0c0e" />
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png" />
+    <!-- A page of its own beside the app (the App Store listing and More link here). Same colours and title face as the
+         app, from fonts the system already has; nothing is downloaded. scripts/web.js keeps it out of the app's way. -->
+    <style>
+      @font-face {
+        font-family: "Gym Display";
+        font-weight: 100 900;
+        src: local("HelveticaNeue-CondensedBlack"), local("Helvetica Neue Condensed Black"),
+          local("Bahnschrift Condensed Bold"), local("BahnschriftCondensed-Bold"),
+          local("Roboto Condensed Bold"), local("RobotoCondensed-Bold"),
+          local("Arial Narrow Bold"), local("ArialNarrow-Bold"),
+          local("Liberation Sans Narrow Bold"), local("DejaVu Sans Condensed Bold");
+      }
+      body { margin: 0; background: #0b0c0e; color: #d7d9dd; font: 17px/1.6 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; -webkit-text-size-adjust: 100%; }
+      main { max-width: 680px; margin: 0 auto; padding: 48px 20px 72px; }
+      h1, h2 { font-family: "Gym Display", "Arial Narrow", sans-serif; color: #f4f5f6; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.1; }
+      h1 { font-size: 40px; margin: 0 0 8px; }
+      h2 { font-size: 22px; margin: 40px 0 8px; }
+      p, ul { margin: 0 0 14px; }
+      ul { padding-left: 22px; }
+      a { color: #ff4d63; }
+      .lead { color: #f4f5f6; font-size: 19px; }
+      .quiet { color: #8b9098; font-size: 15px; }
+      nav { margin-bottom: 36px; font-size: 15px; }
+      nav a { margin-right: 18px; }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <nav><a href="./">Overload</a><a href="support.html">Support</a></nav>
+      <h1>Privacy</h1>
+      <p class="lead">Overload works without an account, and then what you log stays on your device. If you sign in, a
+        copy is kept in your account, and the Social tab shows other people only what you choose.</p>
+
+      <h2>Without an account</h2>
+      <p>Your workouts, weights, body measurements, nutrition and sleep entries, notes and settings are stored on your
+        device only: in the app's storage on the phone, or in your browser's storage when you use the web app. Nothing
+        of it is sent to me or to anyone else. I cannot see it, and I cannot restore it for you.</p>
+      <ul>
+        <li>Backups are files on your device. The automatic weekly backup is written to the app's own folder, and an
+          export goes wherever you send it from the share sheet.</li>
+        <li>Reminders and the rest timer are local notifications, scheduled on the device. The app uses no push service.</li>
+        <li>Apple Health (iPhone) and Health Connect (Android), only if you switch it on in <em>More › Settings</em>: the
+          app saves your timed workouts and your weigh-ins to Health or Health Connect and reads your bodyweight from it.
+          This happens on the device, between the app and the health store. A weigh-in that comes into the app's
+          bodyweight log this way is then part of your data like one you typed: without an account it stays on the
+          device, with an account it is in your account's copy (below). It is never used for ads and never passed to
+          anyone else. Turn it off in the app, or under <em>Health › Sharing › Apps</em> on
+          the iPhone and <em>Health Connect › App permissions</em> on Android.</li>
+        <li>No tracking, no third-party analytics and no ads.</li>
+      </ul>
+
+      <h2>With an account</h2>
+      <p>An account is optional. You sign in with Apple (iPhone) or Google, or try the Social tab as a guest. The account
+        lives in a database run for the app by Supabase (Supabase Inc.), on servers in Frankfurt, Germany. It holds:</p>
+      <ul>
+        <li><strong>How you signed in.</strong> Apple or Google confirm who you are and pass on an ID and your email
+          address (Apple lets you hide it). The app never sees your password. A guest gets a random ID and nothing else.</li>
+        <li><strong>Your profile.</strong> The name and username you choose, a photo if you add one, your home gym, and
+          what the app works out from your training: the weekly score, the level, the weeks on plan and the awards.</li>
+        <li><strong>A copy of your training data</strong> (not for guests): workouts, the plan and its settings,
+          nutrition, sleep, weigh-ins and body measurements, and the profile photo. It is written a few seconds after
+          you change something, so that a new phone gets everything back when you sign in. Only your own account can
+          read it.</li>
+        <li><strong>What you do in the Social tab.</strong> Check-ins (the gym, whether you are there or going, and
+          the hour), favourite gyms, the week's quests, and the people you blocked or reported.</li>
+      </ul>
+      <p><strong>What other people see.</strong> Your name, username, photo, score, level, weeks on plan and awards, on
+        the boards and on your profile. At a gym, your name is on the list of who is there or going only while
+        <em>Who sees my check-ins</em> says Everyone; set it to Nobody under <em>Social › You</em> and you count as a
+        number only. Others see the hour of a check-in, never the minute. Nobody else sees your workouts, weights,
+        body measurements, nutrition, sleep or email address.</p>
+      <p>I use this data to run the account and the Social tab you asked for (Art. 6(1)(b) GDPR), and for nothing else:
+        no advertising, no profiling, no sale. The body data inside your copy is kept because you signed in to have it
+        kept (Art. 9(2)(a) GDPR); deleting the account withdraws that.</p>
+
+      <h2>Location and the map</h2>
+      <p>The Social tab asks for your location to show the gyms around you. It is optional and only used while the app
+        is open; without it the map starts at a fixed place and you search by name.</p>
+      <ul>
+        <li>Your position goes to the app's database to find the gyms near it. It is not stored with your account; a
+          check-in stores the gym, not where you stood.</li>
+        <li>The map's tiles come from OpenFreeMap, and gyms and places the app does not know yet are looked up at
+          OpenStreetMap's public Overpass servers and the Photon search service (Komoot). They receive the area you look
+          at or the words you search for and, as with any internet request, your IP address. They do not learn who you are.</li>
+      </ul>
+
+      <h2>Other connections the app makes</h2>
+      <ul>
+        <li><strong>Update check (phone app).</strong> When it starts, the app asks Expo's update service (Expo,
+          650 Industries Inc., USA) whether a newer version of the app's own code is available, and downloads it if so.
+          The request carries technical details only: the platform, the app's version, and a random installation ID that
+          is created on the device and is not derived from your hardware, your account or anything you enter. As with
+          any internet request, Expo's servers see your IP address. None of your entries are part of it. The purpose is
+          to deliver fixes (Art. 6(1)(f) GDPR). Without a connection the app simply starts as it is.</li>
+        <li><strong>Pro.</strong> A purchase is handled by Apple's App Store or Google Play. The app learns only whether
+          Pro is active; it never sees your payment details.</li>
+        <li><strong>Ads.</strong> The app shows none and asks for none. The Android app still contains Google's ad
+          component (AdMob), switched off; when the phone starts the app, that component can send Google technical
+          details such as the phone's ad ID (which you can reset or delete in the phone's settings), the device model
+          and the app's version. None of your entries are sent. Google's policy:
+          <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</li>
+        <li><strong>Web app.</strong> gym.sardio.dev is served by GitHub Pages (GitHub Inc., USA), which processes the IP
+          addresses of visitors to deliver the site and keep it secure. After the first visit the app's files are kept
+          in your browser and it works without a connection.</li>
+      </ul>
+
+      <h2 id="delete-account">Delete your account</h2>
+      <p>In the app: <em>More › Account › Delete account</em>. This erases the account at once and for good: the
+        sign-in, the profile and photo, the check-ins, scores and awards, and the copy of your training data. What is on
+        your phone stays there until you erase it too (below).</p>
+      <p>If you cannot open the app, write to <a href="mailto:hello@sardio.dev">hello@sardio.dev</a> from the email
+        address of the account and I delete it within 30 days. Nothing is kept afterwards.</p>
+
+      <h2>Your control</h2>
+      <p>On the device, everything is in your hands inside the app: <em>More › Backup &amp; data</em> exports all of it as
+        one file, and <em>Delete all data</em> in the same place erases it. Deleting the app, or the website's data in
+        your browser, removes it as well.</p>
+      <p>For what an account holds you have the rights the GDPR gives you: to see it, to have it corrected or deleted, to
+        take it with you, and to complain to a data protection authority. The export and <em>Delete account</em> cover
+        most of that without asking; for anything else write to me. Without an account I hold no data about you, and
+        if you write to me I only have your message.</p>
+
+      <h2>Health information</h2>
+      <p>The numbers the app suggests – weights, calories, protein, body fat estimates – are general training guidance
+        worked out on your device from what you entered. They are not medical advice.</p>
+
+      <h2>Contact</h2>
+      <p>Overload is made by Sardio, an independent developer. Questions about this page or the app:
+        <a href="mailto:hello@sardio.dev">hello@sardio.dev</a>.</p>
+      <p class="quiet">Last updated: 25 November 2026. If the app ever changes what leaves your device, this page
+        changes first.</p>
+    </main>
+  </body>
+</html>
